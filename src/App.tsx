@@ -1,7 +1,9 @@
+import "./index.css";
 import "./App.css";
+import { Invite } from "./Invite";
 
 function App() {
-  return <>Rubin & Edward</>;
+  return <Invite />;
 }
 
 export default App;
