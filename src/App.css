@@ -205,10 +205,12 @@ a {
   height: 100vh;
   min-height: 680px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding-bottom: 6vh;
 }
 .hero-bg {
   position: absolute;
@@ -232,38 +234,69 @@ a {
 }
 .hero-content {
   position: relative;
-  display: flex;
   flex-direction: column;
+  display: flex;
   z-index: 10;
+  gap: 0;
   padding: 0 1.5rem;
-  color: #fff;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+  color: oklch(0.45 0.04 30);
   animation: fadeUp 1.2s ease-out both;
 }
 .eyebrow {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5em;
+  color: oklch(0.5 0.04 30);
+  margin-bottom: 0.5rem;
 }
 .monogram {
-  margin: 2rem 0;
-  font-family: var(--font-script);
-  font-size: 5rem;
-  line-height: 1;
-}
-@media (min-width: 768px) {
-  .monogram {
-    font-size: 8rem;
-  }
+  margin: 0.25rem auto;
+  display: block;
+  width: clamp(200px, 32vw, 300px);
+  height: auto;
+  animation: float 6s ease-in-out infinite;
 }
 .names {
-  font-family: var(--font-script);
-  font-size: 2.5rem;
+  font-family: var(--font-script-alt);
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: oklch(0.5 0.05 30);
+  margin-top: 0.25rem;
 }
 @media (min-width: 768px) {
   .names {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
+}
+.tagline {
+  margin-top: 0.25rem;
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+  color: oklch(0.5 0.05 30);
+}
+.hero-date {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+.scroll-cue {
+  margin-top: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: oklch(0.78 0.06 50 / 0.4);
+  backdrop-filter: blur(8px);
+  animation:
+    pulseGlow 2.5s ease-out infinite,
+    float 5s ease-in-out infinite;
 }
 .tagline {
   margin-top: 1rem;
@@ -374,21 +407,6 @@ a {
   font-family: var(--font-display);
   font-size: 1.5rem;
   letter-spacing: 0.3em;
-}
-
-/* === GOLD SHIMMER === */
-.gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    oklch(0.6 0.08 60),
-    oklch(0.85 0.1 80),
-    oklch(0.6 0.08 60)
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer 5s ease-in-out infinite;
 }
 
 /* === DIVIDER === */
