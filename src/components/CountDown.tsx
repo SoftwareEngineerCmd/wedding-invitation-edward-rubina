@@ -12,7 +12,7 @@ export const CountDown = () => {
         Մնաց
       </p>
 
-      <div className="grid grid-flow-col justify-between gap-3 text-center auto-cols-max">
+      <div className="grid grid-flow-col justify-between items-center gap-3 text-center auto-cols-max">
         <TimeBox value={days} label="Օր" />
 
         <div className="w-px h-12 bg-primary" />
