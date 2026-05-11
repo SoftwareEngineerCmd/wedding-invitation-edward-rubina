@@ -1,14 +1,18 @@
-import { ScrollReveal } from "@allwells/react-scroll-reveal";
 import Photo1 from "../assets/wedding/photo-22.jpg";
 import Photo2 from "../assets/wedding/photo-222.jpg";
 import { Section } from "./UI/Section";
+import { motion } from "framer-motion";
 
 export const AboutGallery = () => {
   return (
     <div className="max-w-5xl mx-auto py-10 flex justify-center overflow-hidden">
       <div className="grid grid-cols-2 items-start">
-        {/* Left image */}
-        <ScrollReveal animationType="slideRight" duration={1200}>
+        <motion.div
+          initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div className="translate-x-5 z-10 relative">
             <img
               src={Photo1}
@@ -16,10 +20,14 @@ export const AboutGallery = () => {
               alt="Edward & Rubina"
             />
           </div>
-        </ScrollReveal>
+        </motion.div>
 
-        {/* Right image */}
-        <ScrollReveal animationType="slideLeft" duration={1200}>
+        <motion.div
+          initial={{ opacity: 0, x: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div className="-translate-x-5 translate-y-16 z-20 relative">
             <img
               src={Photo2}
@@ -27,7 +35,7 @@ export const AboutGallery = () => {
               className="w-[320px] h-125 object-cover object-top"
             />
           </div>
-        </ScrollReveal>
+        </motion.div>
       </div>
     </div>
   );

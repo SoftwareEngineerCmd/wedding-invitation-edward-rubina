@@ -203,6 +203,7 @@ a {
 .hero-bg {
   position: absolute;
   inset: 0;
+
   animation: kenburns 18s ease-in-out infinite alternate;
 }
 .hero-bg img {
@@ -444,10 +445,10 @@ a {
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  border-radius: 25px;
   justify-content: center;
-  border-radius: 0.375rem;
   background: var(--primary);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--primary-foreground);
