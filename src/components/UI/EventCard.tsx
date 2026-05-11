@@ -1,44 +1,45 @@
 export const EventCard = ({
-  image,
+  icon,
   title,
   time,
   place,
-  sub,
+  address,
   href,
-  icon,
-  reverse,
 }: {
-  image: string;
+  icon: string;
   title: string;
   time: string;
   place: string;
-  sub: string;
+  address: string;
   href: string;
-  icon: string;
-  reverse?: boolean;
 }) => {
   return (
-    <div className={`event-card ${reverse ? "event-card-reverse" : ""}`}>
-      <div className="event-image-wrapper">
-        <img src={image} alt={title} loading="lazy" className="event-image" />
+    <div className="flex flex-col items-center text-center p-4 ">
+      {/* Icon */}
+      <div className="mb-5">
+        <img src={icon} alt={title} className="w-16 sm:w-20 object-contain" />
       </div>
 
-      <div className="event-content">
-        <div className="event-icon">{icon}</div>
+      {/* Title */}
+      <p className="text-lg font-medium mb-1">{title}</p>
 
-        <h3 className="event-title">{title}</h3>
+      {/* Time */}
+      <p className="font-bold mb-4.5 text-primary text-xl">{time}</p>
 
-        <div className="divider-ornament event-divider">
-          <span>•</span>
-        </div>
+      {/* Place */}
+      <p className="font-semibold mt-1 text-primary text-xl">{place}</p>
 
-        <p className="event-time">{time}</p>
+      {/* Address */}
+      <p className="text-md">{address}</p>
 
-        <p className="event-place">{place}</p>
-
-        <p className="event-sub">{sub}</p>
-
-        <a href={href} target="_blank" rel="noreferrer" className="event-link">
+      {/* Button */}
+      <div className="mt-5">
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className=" btn-primary "
+        >
           Ինչպես հասնել
         </a>
       </div>

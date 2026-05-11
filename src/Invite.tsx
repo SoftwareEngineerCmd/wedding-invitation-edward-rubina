@@ -2,6 +2,7 @@ import { CountDown } from "./components/CountDown";
 import { Hero } from "./components/Hero";
 import "./App.css";
 import { About } from "./components/About";
+import { ProgramOfTheDay } from "./components/ProgramOfTheDay";
 
 export const Invite = () => {
   return (
@@ -9,7 +10,7 @@ export const Invite = () => {
       <Hero />
       <CountDown />
       <About />
-      {/* ABOUT */}
+      <ProgramOfTheDay />
       {/* GALLERY */}
       {/* SCHEDULE */}
     </div>
