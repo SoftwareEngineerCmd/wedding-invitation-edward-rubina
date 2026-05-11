@@ -8,7 +8,7 @@ export const CountDown = () => {
 
   return (
     <Section>
-      <p className="text-center text-sm uppercase tracking-[0.4em] text-muted-foreground">
+      <p className="text-center text-sm uppercase tracking-[0.4em] text-muted-foreground ">
         Մնաց
       </p>
 
