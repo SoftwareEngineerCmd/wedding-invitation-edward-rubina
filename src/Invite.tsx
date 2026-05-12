@@ -3,6 +3,8 @@ import { Hero } from "./components/Hero";
 import "./App.css";
 import { About } from "./components/About";
 import { ProgramOfTheDay } from "./components/ProgramOfTheDay";
+import { Details } from "./components/Details";
+import { Footer } from "./components/Footer";
 
 export const Invite = () => {
   return (
@@ -11,8 +13,8 @@ export const Invite = () => {
       <CountDown />
       <About />
       <ProgramOfTheDay />
-      {/* GALLERY */}
-      {/* SCHEDULE */}
+      <Details />
+      <Footer />
     </div>
   );
 };
