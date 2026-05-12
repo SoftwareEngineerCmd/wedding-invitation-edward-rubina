@@ -12,8 +12,8 @@ const WeddingGallery = () => {
   return (
     <section className="relative overflow-hidden">
       {/* ================= DESKTOP ================= */}
-      <div className=" flex sm:hidden items-center justify-center py-20">
-        <div className="relative w-full max-w-6xl h-80 py-2 flex items-center justify-center">
+      <div className=" flex sm:hidden items-center justify-center pb-20">
+        <div className="relative w-full max-w-6xl h-[100vw] py-2 flex items-center justify-center">
           {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -33,7 +33,11 @@ const WeddingGallery = () => {
             transition={{ duration: 0.85 }}
             className="absolute z-10 w-[60vw] h-[90vw] right-0"
           >
-            <img src={Photo2} alt="" className="w-full h-full object-cover " />
+            <img
+              src={Photo2}
+              alt=""
+              className="w-full h-full object-cover object-center"
+            />
           </motion.div>
 
           {/* RIGHT IMAGE */}
@@ -108,7 +112,7 @@ export const ProgramOfTheDay = () => {
     <section className="py-10">
       <div className="flex flex-col items-center">
         <p className="heading-script text-primary text-center">Օրվա Ծրագիր</p>
-        <div className="w-px h-30 bg-primary py-2" />
+        <div className="w-px h-30 bg-primary " />
       </div>
 
       <WeddingGallery />
