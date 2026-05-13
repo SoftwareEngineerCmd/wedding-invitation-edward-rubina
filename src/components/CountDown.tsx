@@ -3,7 +3,7 @@ import { Section } from "./UI/Section";
 
 import React from "react";
 
-export const CountDown = () => {
+export const Countdown = () => {
   const { days, hours, minutes, seconds } = useCountdown();
 
   return (
