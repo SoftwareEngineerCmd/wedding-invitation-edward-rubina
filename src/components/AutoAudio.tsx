@@ -18,14 +18,6 @@ export const AutoAudio = ({ src, loop = true, volume = 1 }: AutoAudioProps) => {
     audio.volume = volume;
   }, [loop, volume]);
 
-  // 📍 Smooth scroll
-  const scrollToAbout = () => {
-    const el = document.getElementById("about");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   // ▶️ START
   const handleStart = async () => {
     const audio = audioRef.current;
@@ -34,8 +26,6 @@ export const AutoAudio = ({ src, loop = true, volume = 1 }: AutoAudioProps) => {
     try {
       await audio.play();
       setIsPlaying(true);
-
-      scrollToAbout();
     } catch (err) {
       console.log("Play failed:", err);
     }
