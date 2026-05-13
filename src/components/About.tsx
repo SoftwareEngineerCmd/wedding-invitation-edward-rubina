@@ -1,5 +1,6 @@
 import Photo1 from "../assets/wedding/photo-22.jpg";
 import Photo2 from "../assets/wedding/photo-222.jpg";
+import { CalendarSection } from "./CalendarSection";
 import { Section } from "./UI/Section";
 import { motion } from "framer-motion";
 
@@ -56,10 +57,21 @@ export const About = () => {
             Մեր սրտերում ծնված լույսը շուտով կդառնա մի գեղեցիկ միություն՝
             ընտանիք։ Սիրով հրավիրում ենք Ձեզ ներկա գտնվելու այդ հեքիաթային
             օրվան, որտեղ ամեն ինչ շնչում է սիրով, ջերմությամբ ու երջանկությամբ…
-            🤍
+            🤎
           </p>
 
-          <p className="about-date">03.07.2026</p>
+          <CalendarSection
+            title="Հուլիս"
+            days={[
+              { label: "Երկ", value: 28 },
+              { label: "Երք", value: 29 },
+              { label: "Չրք", value: 30 },
+              { label: "Հնգ", value: 1 },
+              { label: "Ուրբ", value: 3, active: true },
+              { label: "Շբթ", value: 4 },
+              { label: "Կիր", value: 5 },
+            ]}
+          />
         </div>
       </Section>
 

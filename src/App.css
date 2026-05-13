@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@font-face {
+  font-family: "armAllegroU";
+  src: url("./assets/fonts/ArmAllegroU.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 [data-theme="wedding"] {
   color-scheme: light;
 
@@ -44,7 +51,10 @@
   --font-script: "Great Vibes", cursive;
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Cormorant SC", serif;
-
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-monsieur: "Monsieur La Doulaise", cursive;
+  --font-armAllegroU: "armAllegroU";
+  --font-dzeragir: "dzeragir";
   /* === BORDER === */
   --border: oklch(0.85 0.02 60);
 
@@ -57,10 +67,26 @@
   --muted-foreground: oklch(0.5 0.02 40);
   --border: oklch(0.85 0.02 60);
   --gold: oklch(0.72 0.09 75);
-  --font-script: "Great Vibes", cursive;
-  --font-serif: "Cormorant Garamond", serif;
-  --font-display: "Cormorant SC", serif;
 }
+
+.monsieur {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.armAllegroU {
+  font-family: "armAllegroU", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -74,7 +100,7 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-serif);
+  font-family: var(--font-montserrat);
   font-weight: 300;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -101,24 +127,7 @@ a {
 }
 
 /* === ANIMATIONS === */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 @keyframes float {
   0%,
   100% {
@@ -128,6 +137,7 @@ a {
     transform: translateY(-12px);
   }
 }
+
 @keyframes shimmer {
   0%,
   100% {
@@ -137,20 +147,22 @@ a {
     background-position: 100% 50%;
   }
 }
-@keyframes petalFall {
+
+@keyframes swing-left-right {
   0% {
-    transform: translate3d(0, -10vh, 0) rotate(0deg);
-    opacity: 0;
+    transform: rotate(0deg);
   }
-  10% {
-    opacity: 1;
+
+  50% {
+    transform: rotate(-10deg);
   }
+
   100% {
-    transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(720deg);
-    opacity: 0;
+    transform: rotate(0deg);
   }
 }
-@keyframes pulseGlow {
+
+/* @keyframes pulseGlow {
   0%,
   100% {
     box-shadow: 0 0 0 0 oklch(0.78 0.06 50 / 0.4);
@@ -158,7 +170,8 @@ a {
   50% {
     box-shadow: 0 0 0 18px oklch(0.78 0.06 50 / 0);
   }
-}
+} */
+
 @keyframes kenburns {
   0% {
     transform: scale(1.05) translate(0, 0);
@@ -268,7 +281,11 @@ a {
   letter-spacing: 0.4em;
   text-transform: uppercase;
 }
-
+.swing {
+  animation: swing-left-right 3s ease-in-out infinite;
+  transform-origin: center;
+  display: inline-block;
+}
 .gold-shimmer {
   background: linear-gradient(
     90deg,
@@ -284,7 +301,7 @@ a {
 }
 
 .heading-script {
-  font-family: var(--font-script);
+  font-family: var(--font-monsieur);
   font-size: 2.5rem;
 }
 @media (min-width: 768px) {

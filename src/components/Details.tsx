@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import Photo1 from "../assets/wedding/photo-5.jpg";
 import Photo2 from "../assets/wedding/photo-55.jpg";
 import Photo3 from "../assets/wedding/photo-555.jpg";
+import Photo1Mobile from "../assets/wedding/photo-5.mobile.jpg";
+import Photo2Mobile from "../assets/wedding/photo-55.mobile.jpg";
+import Photo3Mobile from "../assets/wedding/photo-555.mobile.jpg";
 import { Section } from "./UI/Section";
 
 const Gallery = () => {
   return (
     <section className="relative overflow-hidden">
-      {/* ================= DESKTOP ================= */}
       <div className=" flex sm:hidden items-center justify-center pb-20">
         <div className="relative w-full max-w-6xl h-[100vw] py-2 flex items-center justify-center">
           {/* LEFT IMAGE */}
@@ -18,7 +20,11 @@ const Gallery = () => {
             transition={{ duration: 0.7 }}
             className="absolute z-20 w-[50vw] h-[75vw] right-1/2"
           >
-            <img src={Photo1} alt="" className="w-full h-full object-cover " />
+            <img
+              src={Photo2Mobile}
+              alt=""
+              className="w-full h-full object-cover "
+            />
           </motion.div>
 
           {/* CENTER IMAGE (ABSOLUTE HERO) */}
@@ -30,7 +36,7 @@ const Gallery = () => {
             className="absolute z-10 w-[60vw] h-[90vw] right-0"
           >
             <img
-              src={Photo2}
+              src={Photo1Mobile}
               alt=""
               className="w-full h-full object-cover object-center"
             />
@@ -45,9 +51,9 @@ const Gallery = () => {
             className="absolute z-30 w-[45vw] h-[65vw] top-2/3 "
           >
             <img
-              src={Photo3}
+              src={Photo3Mobile}
               alt=""
-              className="w-full h-full object-cover object-[0%_650%]"
+              className="w-full h-full object-cover object-[40%_50%]"
             />
           </motion.div>
         </div>
@@ -100,7 +106,7 @@ export const Details = () => {
       </Section>
       <Section>
         <section className="section details text-center">
-          <h2 className="heading-script gold-shimmer">Details</h2>
+          <h2 className="heading-script gold-shimmer monsieur">Details</h2>
           <p className="about-text center" style={{ marginTop: "1.5rem" }}>
             Ձեզ հետ բերեք ՍԵՐ, ժպիտներ ու անսահման դրական էմոցիաներ:
           </p>
