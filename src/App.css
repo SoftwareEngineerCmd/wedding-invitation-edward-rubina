@@ -48,7 +48,7 @@
   --gold: oklch(0.72 0.09 75);
 
   /* === TYPOGRAPHY === */
-  --font-script: "Great Vibes", cursive;
+  --font-script: "Pinyon Script", cursive;
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Cormorant SC", serif;
   --font-montserrat: "Montserrat", sans-serif;
@@ -246,34 +246,40 @@ a {
   margin-bottom: 0.5rem;
 }
 .monogram {
-  margin: 0.25rem auto;
+  margin: 0.2rem auto;
   display: block;
   width: clamp(200px, 32vw, 300px);
   height: auto;
   animation: float 6s ease-in-out infinite;
 }
 .names {
-  font-family: var(--font-script-alt);
-  font-weight: 700;
-  font-size: 3.25rem;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  color: oklch(0.5 0.05 30);
-  margin-top: 0.25rem;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 13vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  margin-top: 1rem;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .names {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 .tagline {
+  margin-top: 0.5rem;
   font-family: var(--font-script);
-  font-size: 1.4rem;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 9vw, 4rem);
   letter-spacing: 0.02em;
-  opacity: 0.85;
-  color: oklch(0.5 0.05 30);
-  margin-top: 0.25rem;
-  font-style: italic;
+  opacity: 1;
+  color: var(--color-primary);
+}
+@media (min-width: 768px) {
+  .tagline {
+    font-size: 2.25rem;
+  }
 }
 .hero-date {
   margin-top: 2.5rem;
